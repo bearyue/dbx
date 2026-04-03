@@ -117,8 +117,8 @@ profiles:
 
 仓库里现在提供了一套可重复使用的本地联调环境：
 
-- [docker-compose.yml](/Users/jianzhangg/Documents/code/dbx/docker-compose.yml)
-- [scripts/docker-smoke-test.sh](/Users/jianzhangg/Documents/code/dbx/scripts/docker-smoke-test.sh)
+- `docker-compose.yml`
+- `scripts/docker-smoke-test.sh`
 
 如果你的环境带 `docker compose` 或 `docker-compose`，可以直接起服务：
 
