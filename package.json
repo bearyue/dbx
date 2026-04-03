@@ -1,12 +1,12 @@
 {
-  "name": "dbx-cli",
+  "name": "@jianzhangg/dbx-cli",
   "version": "0.1.0",
   "description": "Profile-based MySQL and Redis CLI with readonly and timeout enforcement.",
   "type": "module",
   "homepage": "https://github.com/jianzhangg/dbx#readme",
   "repository": {
     "type": "git",
-    "url": "git@github.com:jianzhangg/dbx.git"
+    "url": "git+ssh://git@github.com/jianzhangg/dbx.git"
   },
   "bugs": {
     "url": "https://github.com/jianzhangg/dbx/issues"
@@ -26,6 +26,9 @@
     "skills",
     "profiles.example.yml"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "dev": "tsx src/index.ts",
