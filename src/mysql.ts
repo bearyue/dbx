@@ -164,7 +164,12 @@ export async function runSql(profile: MysqlProfile, sql: string): Promise<Record
           multipleStatements: false
         });
 
-        await connection.query(`SET SESSION max_execution_time = ${timeoutMs}`);
+        // Try to set max_execution_time (MySQL 5.7.4+ / 8.0+), ignore if not supported
+        try {
+          await connection.query(`SET SESSION max_execution_time = ${timeoutMs}`);
+        } catch {
+          // Variable not supported, rely on CLI-side timeout only
+        }
 
         if (profile.readonly) {
           await connection.query("START TRANSACTION READ ONLY");
